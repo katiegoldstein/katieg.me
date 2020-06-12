@@ -6,9 +6,9 @@
     --text: #ffec99;
   }
 
-  /* Cursor taken from http://www.cursors-4u.com */
+  /* Cursor taken from https://www.cursor.cc/ */
 * {
-    cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym57.cur), auto !important;
+    cursor: url(media/cursor.cur), auto !important;
     margin: 0;
     padding: 0;
 }
@@ -153,12 +153,12 @@ color: var(--shadow);
 }
 
 .stars {
-  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  background:#000 url(https://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
   z-index:-2;
 }
 
 .twinkling{
-  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  background:transparent url(https://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
   z-index:-1;
 
   -moz-animation:move-twink-back 200s linear infinite;
