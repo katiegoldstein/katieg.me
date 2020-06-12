@@ -2,7 +2,6 @@
 
 /* Colors */
 :root {
-    --background: #ffec99;
     --shadow: #f0a205;
     --text: #ffec99;
   }
@@ -42,20 +41,56 @@ h1 {
     margin: calc(30vh - 5rem) auto;
   }
 
-#aboutme {
-    font-family: 'Montserrat', sans-serif;
-}
-
-li, a, p {
+li, p {
     font-family: 'Montserrat', sans-serif; 
     color: white;
 }
 
-/* Action Buttons Styling*/
-.actionbuttons, p {
+.main {
+    text-align: center;
+}
+
+/* Centering, the bane of my existence. Aka just praying it works */
+#aboutme {
     text-align: center;
     justify-content: center;
+    display: inline-block;
+    width: 85%;
 }
+
+.actionbuttons{
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+
+p, a {
+    padding-bottom: 2%;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: var(--text);
+    color: var(--shadow);
+    text-align: center;
+    font-family: "Archivo Black", "Archivo", sans-serif;
+    box-shadow: 0 5px 0 var(--shadow);
+}
+
+a:hover {
+    color: var(--text);
+    background-color: var(--shadow);
+    transform: translate(0, 1px);
+    box-shadow: 0 5px 0 var(--shadow);
+}
+
+a:active {
+    box-shadow: 0 5px 0 var(--shadow);
+    transform: translate(0, 7px);
+}
+
 
 /* Twinkling Stars CSS styling by SED Innovations https://codepen.io/WebSonick/pen/vjmgu */
 /* Animation */
