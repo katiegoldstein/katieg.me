@@ -1,1 +1,104 @@
-/*Basic Styling */
+/* Basic Styling */
+
+/* Colors */
+:root {
+    --background: #ffec99;
+    --shadow: #f0a205;
+    --text: #ffec99;
+  }
+
+  /* Cursor taken from http://www.cursors-4u.com */
+* {
+    cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym57.cur), auto !important;
+    margin: 0;
+    padding: 0;
+}
+
+/* Text Styling */
+/* playful font CSS styling by Sarah Fossheim https://css-tricks.com/creating-playful-effects-with-css-text-shadows/ */
+.myname {
+    color: var(--text);
+    text-shadow: 6px 6px var(--shadow),
+      5px 5px var(--shadow), 5.5px 5.5px var(--shadow), 5.25px 5.25px var(--shadow), 5.75px 5.75px var(--shadow),
+      4px 4px var(--shadow), 4.5px 4.5px var(--shadow), 4.25px 4.25px var(--shadow), 4.75px 4.75px var(--shadow),
+      3px 3px var(--shadow), 3.5px 3.5px var(--shadow), 3.25px 3.25px var(--shadow), 3.75px 3.75px var(--shadow),
+      2px 2px var(--shadow), 2.5px 2.5px var(--shadow), 2.25px 2.25px var(--shadow), 2.75px 2.75px var(--shadow),
+      1px 1px var(--shadow), 1.5px 1.5px var(--shadow), 1.25px 1.25px var(--shadow), 1.75px 1.75px var(--shadow),
+      0.5px 0.5px var(--shadow), 0.25px 0.25px var(--shadow), 0.75px 0.75px var(--shadow);
+  }
+
+h1 {
+    font-size: 65px;
+    text-transform: uppercase;
+    font-family: "Archivo Black", "Archivo", sans-serif;
+    font-weight: normal;
+    display: block;
+    width: 666px;
+    max-width: 80vw;
+    min-height: 90px;
+    height: auto;
+    text-align: center;
+    margin: 5rem auto;
+    margin: calc(30vh - 5rem) auto;
+  }
+
+#aboutme {
+    font-family: 'Montserrat', sans-serif;
+}
+
+li, a, p {
+    font-family: 'Montserrat', sans-serif; 
+    color: white;
+}
+
+/* Action Buttons Styling*/
+.actionbuttons, p {
+    text-align: center;
+    justify-content: center;
+}
+
+/* Twinkling Stars CSS styling by SED Innovations https://codepen.io/WebSonick/pen/vjmgu */
+/* Animation */
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+/* Code */
+.stars, .twinkling {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:-2;
+}
+
+.twinkling{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index:-1;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
