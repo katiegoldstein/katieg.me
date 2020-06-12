@@ -167,3 +167,35 @@ color: var(--shadow);
   -webkit-animation:move-twink-back 200s linear infinite;
   animation:move-twink-back 200s linear infinite;
 }
+
+/* Shrinkage aka phone styling */
+@media only screen and (max-device-width: 480px) {
+    h1 {
+        margin: 12rem auto;
+        padding-top: 7rem;
+    }
+    
+    p {
+        padding: 1.5em;
+    }
+    .actionbuttons {
+       padding: 6em; 
+    }
+    #icon {
+        font-size: 3.5em;
+    }
+    .buttonlink {
+        background-color: var(--text);
+        background-size: cover;
+        height: 40px;
+        width: 125px;
+        box-shadow: 0 7px 0 var(--shadow);
+        border: 2px solid var(--shadow);
+    }
+    a.buttonlink {
+        padding-top: 10px;
+    }
+    #footerlist {
+        padding-top: 4em;
+    }
+}
