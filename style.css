@@ -70,7 +70,7 @@ p {
     padding-bottom: 2%;
 }
 
-a {
+.buttonlink {
     text-decoration: none;
     text-transform: uppercase;
     background-color: var(--text);
@@ -85,18 +85,42 @@ a {
 
 }
 
-a:hover {
+.buttonlink:hover {
     color: var(--text);
     background-color: var(--shadow);
     transform: translate(0, 1px);
     box-shadow: 0 5px 0 var(--shadow);
 }
 
-a:active {
+.buttonlink:active {
     box-shadow: 0 5px 0 var(--shadow);
     transform: translate(0, 7px);
 }
 
+/* Footer Styling */
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+#footerlist{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 7%;
+    margin-top: 0px;
+    justify-content: space-between;
+    width: 80%;
+    list-style-type: none;
+}
+
+i, i:visited {
+    color: white;
+}
+
+i:hover {
+color: var(--shadow);
+}
 
 /* Twinkling Stars CSS styling by SED Innovations https://codepen.io/WebSonick/pen/vjmgu */
 /* Animation */
