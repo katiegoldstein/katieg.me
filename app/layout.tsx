@@ -14,8 +14,8 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "Katie's Website",
-  description: "Katie Goldstein - BizOps, Venture Scout, and Children's Book Author",
+  title: "Katie Goldstein",
+  description: "Katie Goldstein - BizOps @ Vooma, Venture Scout @ AVG, and Children's Book Author",
   icons: {
     icon: "/media/favicon.ico",
   },
