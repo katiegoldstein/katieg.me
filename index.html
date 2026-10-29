@@ -1,66 +1,146 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Katie's Website</title>
-    <link rel="icon" type:"image/x-icon" href="/media/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
-    <!--- Clarity Heatmapping Tracking-->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "6g4vabni06");
-    </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Katie Goldstein</title>
+<meta name="description" content="Katie Goldstein — Chief of Staff at Workplay Ventures, children's book author, and venture scout in San Francisco.">
+<link rel="canonical" href="https://www.katieg.me/">
+<meta property="og:title" content="Katie Goldstein">
+<meta property="og:description" content="Chief of Staff, children's book author, venture scout. Borrower card on file.">
+<meta property="og:url" content="https://www.katieg.me/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@katiesquestions">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Archivo+Narrow:wght@500;700&display=swap">
+<style>
+  :root {
+    --cloth: #2E4637;
+    --manila: #F1E6C9;
+    --pocket: #DCC28A;
+    --ink: #2A2622;
+    --muted: #5E574C;
+    --rule-blue: #9DB4CC;
+    --rule-red: #C9473F;
+    --link: #1F3A6B;
+    --link-hover: #B3261E;
+    --typed: "Courier Prime", "Courier New", ui-monospace, monospace;
+    --printed: "Archivo Narrow", "Arial Narrow", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--cloth);
+    background-image:
+      repeating-linear-gradient(45deg, rgba(255,255,255,.035) 0 2px, transparent 2px 6px),
+      repeating-linear-gradient(-45deg, rgba(0,0,0,.05) 0 2px, transparent 2px 6px);
+    font-family: var(--typed);
+    color: var(--ink);
+    display: flex;
+    justify-content: center;
+    padding: 72px 20px 80px;
+  }
+  a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { color: var(--link-hover); }
+  a:focus-visible { outline: 2px solid var(--link-hover); outline-offset: 2px; border-radius: 2px; }
+
+  main { width: 100%; max-width: 640px; display: flex; flex-direction: column; align-items: center; }
+
+  .card {
+    width: 88%;
+    background: var(--manila);
+    border-radius: 3px;
+    box-shadow: 0 10px 24px rgba(0,0,0,.3);
+    position: relative;
+    z-index: 1;
+    transition: transform .6s cubic-bezier(.3,.7,.2,1);
+  }
+  main:hover .card, main:focus-within .card { transform: translateY(-36px) rotate(-.6deg); }
+  @media (hover: none) { .card { transform: translateY(-20px) rotate(-.4deg); } }
+
+  .card header { padding: 26px 26px 14px; border-bottom: 2px solid var(--ink); }
+  .label { font-family: var(--printed); font-weight: 700; font-size: 12px; letter-spacing: .22em; }
+  h1 { margin: 4px 0 0; font-weight: 700; font-size: 40px; line-height: 1.1; }
+  .note { margin: 0; padding: 14px 26px 16px; font-size: 16px; line-height: 1.55; }
+
+  table { width: 100%; border-collapse: collapse; border-top: 1px solid var(--rule-blue); font-size: 16px; }
+  th, td { text-align: left; border-bottom: 1px solid var(--rule-blue); padding: 9px 16px; vertical-align: top; }
+  th { font-family: var(--printed); font-weight: 700; font-size: 12px; letter-spacing: .18em; }
+  th:first-child, td:first-child { width: 110px; border-right: 1.5px solid var(--rule-red); padding-left: 12px; }
+  td:first-child { color: var(--muted); white-space: nowrap; }
+  .soon { color: var(--muted); font-style: italic; }
+  tr.blank td { height: 200px; }
+
+  .pocket {
+    width: 100%;
+    margin-top: -170px;
+    position: relative;
+    z-index: 2;
+    background: var(--pocket);
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 14px 30px rgba(0,0,0,.35);
+    padding: 54px 36px 34px;
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    text-align: center;
+    clip-path: polygon(0 0, 38% 0, 42% 14%, 58% 14%, 62% 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .pocket .rule { width: 70%; height: 1px; background: var(--ink); }
+  .pocket p { margin: 0; font-size: 16px; line-height: 1.5; }
+  .pocket .email { font-weight: 700; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); }
+  .pocket .email:hover { color: var(--link-hover); border-color: var(--link-hover); }
+  .pocket .small { font-family: var(--printed); font-size: 12px; letter-spacing: .16em; color: #4F4128; }
+
+  @media (max-width: 560px) {
+    body { padding: 56px 12px 64px; }
+    .card { width: 92%; }
+    h1 { font-size: 32px; }
+    th:first-child, td:first-child { width: 96px; }
+    td:first-child { font-size: 14px; }
+    th { white-space: nowrap; }
+    th, td { padding: 9px 10px; }
+    .pocket { padding: 50px 20px 28px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .card { transition: none; }
+    main:hover .card, main:focus-within .card { transform: none; }
+  }
+</style>
 </head>
-
 <body>
-    <!--- Main Section Start -->
-    <div class="main">
-        <h1 class="myname">
-            <span aria-hidden="true">K</span><span aria-hidden="true">A</span><span aria-hidden="true">T</span><span
-                aria-hidden="true">I</span><span aria-hidden="true">E</span><span aria-hidden="true"> </span><span
-                aria-hidden="true">G</span><span aria-hidden="true">O</span><span aria-hidden="true">L</span><span
-                aria-hidden="true">D</span><span aria-hidden="true">S</span><span aria-hidden="true">T</span><span
-                aria-hidden="true">E</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span
-                aria-hidden="true">!</span>
-        </h1>
-        <div id="aboutme">
-            <p> Hi there! I'm Katie, BizOps @<a href="https://vooma.ai/" class=externallink>Vooma</a> (AI logistics startup), venture scout @<a href=https://www.av.vc class=externallink> AVG</a>, and children's book author.</p>
-            <p>Currently living in the Bay Area. </p>
-            <p>I get excited about pugs, volunteering, learning new things, and Japanese toilets.</p>
-            <p>Ask me about what I'm reading!</p>
-        </div>
-        <!--- Action Buttons Start -->
-        <div class="actionbuttons">
-            <a href="mailto:katie.e.goldstein@gmail.com" target="_blank" class="buttonlink">Say Hi!</a>
-            <a href="Katie_Goldstein_Resume.pdf" target="_blank" title="Katie Goldstein Resume" class="buttonlink">Resume</a>
-        </div>
-        <!--- Action Buttons End -->
-    </div>
-    <!--- Main Section End -->
-    <!--- Twinkling Stars Start -->
-    <div class="background-container">
-    <div class="stars"></div>
-    <div class="twinkling"></div>
-    <!--- Twinkling Stars End -->
+<main>
+  <article class="card">
+    <header>
+      <div class="label">THE GOLDSTEIN LIBRARY</div>
+      <h1>Goldstein, Katie.</h1>
+    </header>
+    <p class="note">Chief of Staff at Workplay Ventures; children's book author; venture scout. SUBJECTS: Longevity — AI — Biology — Pugs.</p>
+    <table>
+      <thead>
+        <tr><th scope="col">DATE DUE</th><th scope="col">BORROWED BY</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>OCT 2026</td><td><a href="https://flappymail.net">Flappy Mail</a></td></tr>
+        <tr><td>JUL 2026</td><td>Finding Claudette <span class="soon">— coming soon</span></td></tr>
+        <tr><td>BEDTIME</td><td>Children's books</td></tr>
+        <tr><td>ONGOING</td><td><a href="https://medium.com/@katiegoldstein3">Essays</a></td></tr>
+        <tr><td>ALWAYS</td><td><a href="https://www.goodreads.com/katiegisme">Goodreads</a></td></tr>
+        <tr><td>ANYTIME</td><td><a href="https://www.linkedin.com/in/katie-goldstein/">LinkedIn</a> · <a href="https://x.com/katiesquestions">X</a></td></tr>
+        <tr class="blank" aria-hidden="true"><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </article>
+
+  <footer class="pocket">
+    <div class="label">PLEASE KEEP CARD IN POCKET</div>
+    <div class="rule" aria-hidden="true"></div>
+    <p>To return this borrower, write to<br><a class="email" href="mailto:katie.e.goldstein@gmail.com">katie.e.goldstein@gmail.com</a></p>
+    <div class="small">SAN FRANCISCO · NO. KG 2026</div>
+  </footer>
+</main>
 </body>
-
-<!--- Footer Section Start-->
-<footer>
-    <p>
-    <ul id="footerlist">
-        <li> <a href="https://www.linkedin.com/in/katie-goldstein/" target="_blank"><i class="fab fa-linkedin" id="icon"></i></a></li>
-        <li> <a href="https://calendly.com/katie-e-goldstein/katies-coffee-chats" target="_blank"><i class="far fa-calendar-check"></i></a></li>
-        <li> <a href="https://medium.com/@katiegoldstein3" target="_blank"><i class="fab fa-medium" id="icon"></i></a></li>
-        <li> <a href="http://goodreads.com/katiegisme" target="_blank"><i class="fab fa-goodreads" id="icon"></i></a></li>
-    </ul>
-    </p>
-</footer>
-<!--- Footer Section End-->
-
 </html>
