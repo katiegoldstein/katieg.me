@@ -74,6 +74,7 @@
   th:first-child, td:first-child { width: 110px; border-right: 1.5px solid var(--rule-red); padding-left: 12px; }
   td:first-child { color: var(--muted); white-space: nowrap; }
   .soon { color: var(--muted); font-style: italic; }
+  .links { white-space: nowrap; }
   tr.blank td { height: 200px; }
 
   .pocket {
@@ -100,10 +101,14 @@
     .card { width: 92%; }
     h1 { font-size: 32px; }
     th:first-child, td:first-child { width: 96px; }
-    td:first-child { font-size: 14px; }
+    td:first-child, .links { font-size: 14px; }
+    td:first-child { white-space: normal; }
     th { white-space: nowrap; }
     th, td { padding: 9px 10px; }
     .pocket { padding: 50px 20px 28px; }
+  }
+  @media (max-width: 374px) {
+    .links { white-space: normal; }
   }
   @media (prefers-reduced-motion: reduce) {
     .card { transition: none; }
@@ -115,10 +120,10 @@
 <main>
   <article class="card">
     <header>
-      <div class="label">THE GOLDSTEIN LIBRARY</div>
+      <div class="label">THIS WEBSITE BELONGS TO</div>
       <h1>Goldstein, Katie.</h1>
     </header>
-    <p class="note">Chief of Staff at Workplay Ventures; children's book author; venture scout. SUBJECTS: Longevity — AI — Biology — Pugs.</p>
+    <p class="note">Chief of Staff at Workplay Ventures; children's book author; venture scout.<br>SUBJECTS: Longevity — Backgammon — Death — Dogs.</p>
     <table>
       <thead>
         <tr><th scope="col">DATE DUE</th><th scope="col">BORROWED BY</th></tr>
@@ -126,10 +131,9 @@
       <tbody>
         <tr><td>OCT 2026</td><td><a href="https://flappymail.net">Flappy Mail</a></td></tr>
         <tr><td>JUL 2026</td><td>Finding Claudette <span class="soon">— coming soon</span></td></tr>
-        <tr><td>BEDTIME</td><td>Children's books</td></tr>
+        <tr><td>2021 &amp; 2022</td><td><a href="https://www.amazon.com/stores/author/B0981TW27M/allbooks?ccs_id=ca8649d0-0e19-4355-af5d-f5f1d81f61c1">Children's books</a></td></tr>
         <tr><td>ONGOING</td><td><a href="https://medium.com/@katiegoldstein3">Essays</a></td></tr>
-        <tr><td>ALWAYS</td><td><a href="https://www.goodreads.com/katiegisme">Goodreads</a></td></tr>
-        <tr><td>ANYTIME</td><td><a href="https://www.linkedin.com/in/katie-goldstein/">LinkedIn</a> · <a href="https://x.com/katiesquestions">X</a></td></tr>
+        <tr><td>ANYTIME</td><td class="links"><a href="https://www.linkedin.com/in/katie-goldstein/">LinkedIn</a> · <a href="https://x.com/katiesquestions">X</a> · <a href="https://www.goodreads.com/katiegisme">Goodreads</a></td></tr>
         <tr class="blank" aria-hidden="true"><td></td><td></td></tr>
       </tbody>
     </table>
@@ -138,7 +142,7 @@
   <footer class="pocket">
     <div class="label">PLEASE KEEP CARD IN POCKET</div>
     <div class="rule" aria-hidden="true"></div>
-    <p>To return this borrower, write to<br><a class="email" href="mailto:katie.e.goldstein@gmail.com">katie.e.goldstein@gmail.com</a></p>
+    <p>Please return to<br><a class="email" href="mailto:katie.e.goldstein@gmail.com">katie.e.goldstein@gmail.com</a></p>
     <div class="small">SAN FRANCISCO · NO. KG 2026</div>
   </footer>
 </main>
